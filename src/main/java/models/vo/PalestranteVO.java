@@ -1,5 +1,7 @@
 package models.vo;
 
+import models.domain.Palestrante;
+
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -34,7 +36,15 @@ public class PalestranteVO {
 	@OneToMany(mappedBy = "palestrante", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	public Set<PalestraPalestranteVO> palestrantes;
 
-	public PalestranteVO() {
+	public PalestranteVO() {}
+
+	public PalestranteVO(Palestrante palestrante) {
+		this.id = palestrante.id;
+		this.nome = palestrante.nome;
+		this.cpf = palestrante.cpf;
+		this.endereco = palestrante.endereco;
+		this.telefone = palestrante.telefone;
+		this.email = palestrante.email;
 	}
 
 	public PalestranteVO(int id, String nome, String cpf, String endereco, String telefone, String email) {

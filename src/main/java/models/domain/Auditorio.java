@@ -1,5 +1,7 @@
 package models.domain;
 
+import models.vo.AuditorioVO;
+
 public class Auditorio {
 
     public int id;
@@ -11,6 +13,12 @@ public class Auditorio {
     public Auditorio(String nome, int quantidadeDeLugares) {
         this.nome = nome;
         this.quantidadeDeLugares = quantidadeDeLugares;
+    }
+
+    public Auditorio(AuditorioVO auditorioVO) {
+        this.id = auditorioVO.id;
+        this.nome = auditorioVO.nome;
+        this.quantidadeDeLugares = auditorioVO.quantidadeDeLugares;
     }
 
     public Auditorio(int id, String nome, int quantidadeDeLugares) {

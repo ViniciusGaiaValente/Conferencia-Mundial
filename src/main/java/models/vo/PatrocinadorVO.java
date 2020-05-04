@@ -1,5 +1,7 @@
 package models.vo;
 
+import models.domain.Patrocinador;
+
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -26,6 +28,11 @@ public class PatrocinadorVO {
 	public Set<PalestraPatrocinadorVO> patrocinador;
 
 	public PatrocinadorVO() {
+	}
+
+	public PatrocinadorVO(Patrocinador patrocinador) {
+		this.id = patrocinador.id;
+		this.nome = patrocinador.nome;
 	}
 
 	public PatrocinadorVO(int id, String nome) {

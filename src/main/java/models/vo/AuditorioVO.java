@@ -1,5 +1,7 @@
 package models.vo;
 
+import models.domain.Auditorio;
+
 import javax.persistence.*;
 
 
@@ -16,7 +18,12 @@ public class AuditorioVO  {
 	@Column(name = "quantidade_de_lugares")
 	public int quantidadeDeLugares;
 
-	public AuditorioVO() {
+	public AuditorioVO() {}
+
+	public AuditorioVO(Auditorio auditorio) {
+		this.id = auditorio.id;
+		this.nome = auditorio.nome;
+		this.quantidadeDeLugares = auditorio.quantidadeDeLugares;
 	}
 
 	public AuditorioVO(int id, String nome, int quantidadeDeLugares) {

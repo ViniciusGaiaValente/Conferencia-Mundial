@@ -46,15 +46,6 @@ public class ParticipanteVO {
 		this.email = email;
 	}
 
-	public ParticipanteVO(int id, String nome, String cpf, String endereco, String telefone, String email) {
-		this.id = id;
-		this.nome = nome;
-		this.cpf = cpf;
-		this.endereco = endereco;
-		this.telefone = telefone;
-		this.email = email;
-	}
-
 	public ParticipanteVO(Participante participante) {
 		this.id = participante.id;
 		this.nome = participante.nome;
@@ -62,6 +53,15 @@ public class ParticipanteVO {
 		this.endereco = participante.endereco;
 		this.telefone = participante.telefone;
 		this.email = participante.email;
+	}
+
+	public ParticipanteVO(int id, String nome, String cpf, String endereco, String telefone, String email) {
+		this.id = id;
+		this.nome = nome;
+		this.cpf = cpf;
+		this.endereco = endereco;
+		this.telefone = telefone;
+		this.email = email;
 	}
 
 }

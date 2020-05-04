@@ -17,16 +17,21 @@ public class EnviarFormParticipanteServlet extends HttpServlet {
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-        IParticipanteService servico = ServiceFactory.participante();
-        Participante participante = new Participante();
-
         try {
+
+            IParticipanteService servico = ServiceFactory.participante();
+
+            Participante participante = new Participante();
 
             participante.nome = (String) request.getParameter("nome");
             participante.cpf = (String) request.getParameter("cpf");
             participante.endereco = (String) request.getParameter("endereco");
             participante.telefone = (String) request.getParameter("telefone");
             participante.email = (String) request.getParameter("email");
+
+            boolean ehEditar = (boolean) request.getAttribute("ehEditar") ;
+
+
 
             //TODO validar participante
 

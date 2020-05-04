@@ -23,15 +23,6 @@ public class Participante {
         this.email = email;
     }
 
-    public Participante(int id, String nome, String cpf, String endereco, String telefone, String email) {
-        this.id = id;
-        this.nome = nome;
-        this.cpf = cpf;
-        this.endereco = endereco;
-        this.telefone = telefone;
-        this.email = email;
-    }
-
     public Participante(ParticipanteVO participanteVO) {
         this.id = participanteVO.id;
         this.nome = participanteVO.nome;
@@ -39,6 +30,15 @@ public class Participante {
         this.endereco = participanteVO.endereco;
         this.telefone = participanteVO.telefone;
         this.email = participanteVO.email;
+    }
+
+    public Participante(int id, String nome, String cpf, String endereco, String telefone, String email) {
+        this.id = id;
+        this.nome = nome;
+        this.cpf = cpf;
+        this.endereco = endereco;
+        this.telefone = telefone;
+        this.email = email;
     }
 
     public int getId() { return id; }

@@ -1,5 +1,7 @@
 package models.domain;
 
+import models.vo.PalestraVO;
+
 import java.util.ArrayList;
 
 public class Palestra {
@@ -25,6 +27,12 @@ public class Palestra {
         this.titulo = titulo;
         this.tema = tema;
         this.auditorio = auditorio;
+    }
+    public Palestra(PalestraVO palestraVO) {
+        this.id = palestraVO.id;
+        this.titulo = palestraVO.titulo;
+        this.tema = palestraVO.tema;
+        this.auditorio = new Auditorio(palestraVO.auditorio);
     }
 
     public Palestra(String titulo, String tema, Auditorio auditorio, ArrayList<Patrocinio> patrocinios, ArrayList<Palestrante> palestrantes, ArrayList<Participante> participantes) {

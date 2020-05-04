@@ -147,8 +147,9 @@
 
                                 <td>
 
-                                    <form>
-                                        <button type="button" class="btn btn-danger">
+                                    <form method="post" action="${pageContext.request.contextPath}/participante/excluir">
+                                        <input type="text" name="idParticipante" value="${participante.id}" style="display: none"/>
+                                        <button type="submit" class="btn btn-danger">
                                             Excluir
                                         </button>
                                     </form>

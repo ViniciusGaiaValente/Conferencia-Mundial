@@ -14,5 +14,5 @@ public interface IParticipanteService {
 
     Participante updateParticipante(Participante participante);
 
-    Participante deleteParticipante(String idParticipante);
+    Participante deleteParticipante(int idParticipante);
 }

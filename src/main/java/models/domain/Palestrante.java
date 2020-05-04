@@ -1,5 +1,7 @@
 package models.domain;
 
+import models.vo.PalestranteVO;
+
 import java.util.ArrayList;
 import java.util.Collection;
 
@@ -20,6 +22,15 @@ public class Palestrante {
         this.endereco = endereco;
         this.telefone = telefone;
         this.email = email;
+    }
+
+    public Palestrante(PalestranteVO palestranteVO) {
+        this.id = palestranteVO.id;
+        this.nome = palestranteVO.nome;
+        this.cpf = palestranteVO.cpf;
+        this.endereco = palestranteVO.endereco;
+        this.telefone = palestranteVO.telefone;
+        this.email = palestranteVO.email;
     }
 
     public Palestrante(int id, String nome, String cpf, String endereco, String telefone, String email) {

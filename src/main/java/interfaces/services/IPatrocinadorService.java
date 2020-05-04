@@ -10,9 +10,9 @@ public interface IPatrocinadorService {
 
     ArrayList<Patrocinador> indexPatrocinadores(int quantidade);
 
-    Patrocinador createPatrocinador(Patrocinador atrocinador);
+    Patrocinador createPatrocinador(Patrocinador patrocinador);
 
-    Patrocinador updatePatrocinador(Patrocinador atrocinador);
+    Patrocinador updatePatrocinador(Patrocinador patrocinador);
 
     Patrocinador deletePatrocinador(String idPatrocinador);
 }

@@ -1,5 +1,7 @@
 package models.vo;
 
+import models.domain.Palestra;
+
 import java.util.Set;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -43,6 +45,13 @@ public class PalestraVO {
 		this.titulo = titulo;
 		this.tema = tema;
 		this.auditorio = auditorio;
+	}
+
+	public PalestraVO(Palestra palestra) {
+		this.id = palestra.id;
+		this.titulo = palestra.titulo;
+		this.tema = palestra.tema;
+		this.auditorio = new AuditorioVO(palestra.auditorio);
 	}
 
 	public PalestraVO(String titulo, String tema, AuditorioVO auditorio, Set<PalestraPatrocinadorVO> patrocinadores,

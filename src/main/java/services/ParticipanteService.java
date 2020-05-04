@@ -5,7 +5,6 @@ import dao.ParticipanteDAO;
 import interfaces.services.IParticipanteService;
 import models.domain.Participante;
 import models.vo.ParticipanteVO;
-import org.hibernate.mapping.List;
 
 import java.util.ArrayList;
 
@@ -50,8 +49,12 @@ public class ParticipanteService implements IParticipanteService {
     }
 
     @Override
-    public Participante deleteParticipante(String idParticipante) {
-        return null;
+    public Participante deleteParticipante(int idParticipante) {
+        ParticipanteVO participanteVO = participanteDAO.searchById(idParticipante);
+
+        participanteVO = participanteDAO.delete(participanteVO);
+
+        return new Participante(participanteVO);
     }
 
 }
